@@ -5,10 +5,7 @@ const server  = http.createServer(app);     //initialize
 
 const PORT    = 1111;   //Ddefault 
 
-server.listen(PORT);                            //Hey! listen.
 app.use(express.static(__dirname + "\public")); //setting the heml directory
-
-console.log("Listening on port: " + PORT);
 
 //routes
 
@@ -17,5 +14,5 @@ app.get('/', function(req,res){
     res.sendFile(__dirname + "/public/index.html");
 });
 
-SourceBuffer.listen(PORT);
+server.listen(PORT);
 console.log('Listening on port: ' + PORT);
